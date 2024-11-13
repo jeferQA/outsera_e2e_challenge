@@ -7,7 +7,7 @@ Especificação das tarefas 1 e 2 de Testes E2E estão no dir: https://github.co
 Report da ultima execução: https://github.com/jeferQA/outsera_cypress_challenge/blob/main/cypress/reports/report_13-11-2024_14h48m37s.html
 
 Observações:
-- Commitei o relatório no projeto para facilitar a visualição
+- Commitei o relatório no projeto para facilitar a visualização
 - Necessário baixar o arquivo html e abrir no navegador
 
 
