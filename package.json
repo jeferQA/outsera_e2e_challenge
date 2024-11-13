@@ -1,0 +1,35 @@
+{
+  "name": "outsera_challenge",
+  "version": "1.0.0",
+  "description": "Outsera Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cucumber-report:run": "node ./cypress/support/cucumber-html-reporter.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeferQA/outsera_cypress_challenge.git"
+  },
+  "author": "Jeferson Indejejczak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeferQA/outsera_cypress_challenge/issues"
+  },
+  "homepage": "https://github.com/jeferQA/outsera_cypress_challenge#readme",
+  "devDependencies": {
+    "cucumber-html-reporter": "^7.2.0",
+    "cypress": "^13.15.2",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/support/step_definitions",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
