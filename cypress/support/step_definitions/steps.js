@@ -35,6 +35,7 @@ When('fill purchase data', () => {
     CheckoutPage.typeProfileFirstName('jeferson')
     CheckoutPage.typeProfileLastName('indejejczak')
     CheckoutPage.typeProfileDocument('68358573073')
+    CheckoutPage.typeProfileBirthDate('1995-09-04')
     CheckoutPage.typeProfilePhone('42999619817')
     CheckoutPage.clickProceedToShipping()
     CheckoutPage.typeShippingPostalCode('84016330')

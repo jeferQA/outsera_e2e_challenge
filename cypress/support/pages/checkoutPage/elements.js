@@ -7,6 +7,7 @@ export const elements = {
         inputLastName: '#client-last-name',
         inputDocument: '#client-document',
         inputPhone:'#client-phone',
+        inputBirthDate: '#customBirthDate',
         btnProceedToShipping: '#go-to-shipping'
     },
     shipping: {

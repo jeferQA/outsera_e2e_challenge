@@ -22,6 +22,10 @@ class CheckoutPage{
         cy.get(elCheckoutPage.profile.inputPhone).should('be.visible').type(phone)
     }
 
+    typeProfileBirthDate(birthDate){
+        cy.get(elCheckoutPage.profile.inputBirthDate).should('be.visible').type(birthDate)
+    }
+
     clickProceedToShipping(){
         cy.wait(2000)
         cy.get(elCheckoutPage.profile.btnProceedToShipping).should('be.visible').click()
