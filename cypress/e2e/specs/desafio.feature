@@ -9,7 +9,7 @@ Feature: Testes E2E
         Given that im on PDP
         Then product must have image
 
-    Scenario: Tarefa 2 - FLuxo de compra
+    Scenario: Tarefa 2 - Fluxo de compra
         Given i add a product to the cart
         When fill purchase data
         Then finish the order
