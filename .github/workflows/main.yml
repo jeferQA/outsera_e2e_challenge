@@ -1,0 +1,41 @@
+name: Run Cypress E2E Tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:   
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Cypress E2E
+        run: npx cypress run --browser=chrome
+      
+      - name: Generate Cucumber HTML report
+        if: always()
+        run: |
+          node ./cypress/support/cucumber-html-reporter.js || echo "Falha ao gerar relatório Cucumber"
+
+      - name: Upload Cucumber report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-report
+          path: |
+            reports/cucumber-html/     
+            cypress/cucumber-json/     
