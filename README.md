@@ -78,3 +78,4 @@ npm run cucumber-report:run
 ```
 - Sempre execute <b>npm run cucumber-report:run</b> após os testes para gerar o relatório HTML.
 - Se executar o comando para gerar o relatório, antes de rodar ao menos um teste, o projeto retornará um erro pois necessita do json do resultado dos testes que é gerado no fim da execução dos testes
+- Esse projeto esta configurado para executar os testes no workflow do github, basta acessar aqui no repositório do projeto a página <b>Actions -> Run Cypress API tests -> opção Run workflow</b>
