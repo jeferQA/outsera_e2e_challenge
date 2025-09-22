@@ -13,9 +13,17 @@ export const elements = {
     shipping: {
         inputPostalCode: '#ship-postalCode',
         inputShipNumber: '#ship-number',
+        inputReceiver: '#ship-receiverName',
         btnProceedToPayment: '#btn-go-to-payment'
     },
     summary: {
         btnPaymentSubmit: '#payment-data-submit'
+    },
+
+    pix: {
+        pixLogoModal: '.VTEX-PIX__pix-logo-container'
+    },
+    paymentOption: {
+        pixOpt: '#payment-group-instantPaymentPaymentGroup'
     }
 }

@@ -39,12 +39,30 @@ class CheckoutPage{
         cy.get(elCheckoutPage.shipping.inputShipNumber).should('be.visible').type(number)
     }
 
+    typeReceiverName(name){
+        cy.get(elCheckoutPage.shipping.inputReceiver).should('be.visible').type(name)
+    }
+
     clickProceedToPayment(){
-        cy.get(elCheckoutPage.shipping.btnProceedToPayment).should('be.visible').click()
+        cy.wait(3000)
+        cy.get(elCheckoutPage.shipping.btnProceedToPayment).should('be.visible').click({force:true})
+    }
+
+    clickBtnPaymentSubmit(){
+        cy.get(elCheckoutPage.summary.btnPaymentSubmit).last().click({force:true})
     }
 
     validateBtnPaymentSubmit(){
         cy.get(elCheckoutPage.summary.btnPaymentSubmit).last().should('exist')
+    }
+
+    validatePixConfirmationModal(){
+        cy.get(elCheckoutPage.pix.pixLogoModal).should('be.visible')
+    }
+
+    clickPixPaymentOption(){
+        cy.wait(2000)
+        cy.get(elCheckoutPage.paymentOption.pixOpt).should('be.visible').click()
     }
 
 }

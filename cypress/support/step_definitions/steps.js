@@ -24,7 +24,7 @@ Then('user should be logged', () => {
 })
 
 Given('i add a product to the cart', () => {
-    PdpPage.visitPdp('/chinelo-slide-unissex-preto/p')
+    PdpPage.visitPdp('/meias-performer-longas-branco/p')
     PdpPage.selectFirstSize()
     PdpPage.clickAddToMinicart()
     MinicartPage.clickProceedToCheckout()
@@ -40,11 +40,18 @@ When('fill purchase data', () => {
     CheckoutPage.clickProceedToShipping()
     CheckoutPage.typeShippingPostalCode('84016330')
     CheckoutPage.typeShippingNumber('123')
+    CheckoutPage.typeReceiverName('Jeferson')
     CheckoutPage.clickProceedToPayment()
+    CheckoutPage.clickPixPaymentOption()
 })
 
-Then('finish the order', () => {
+And('finish the order', () => {
     CheckoutPage.validateBtnPaymentSubmit()
+    CheckoutPage.clickBtnPaymentSubmit()
+})
+
+Then('Pix modal should be visible to confirmation', () => {
+    CheckoutPage.validatePixConfirmationModal()
 })
 
 Given('that im on PDP', () => {

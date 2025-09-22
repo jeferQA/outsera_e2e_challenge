@@ -12,5 +12,6 @@ Feature: Testes E2E
     Scenario: Tarefa 2 - Fluxo de compra
         Given i add a product to the cart
         When fill purchase data
-        Then finish the order
+        And finish the order
+        Then Pix modal should be visible to confirmation
     
